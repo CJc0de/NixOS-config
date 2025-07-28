@@ -200,6 +200,7 @@
     neofetch
     kdePackages.kzones
     filezilla
+    gparted
   ];
 
   virtualisation.virtualbox.host.enable = true;
