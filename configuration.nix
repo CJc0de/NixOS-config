@@ -201,6 +201,7 @@
     kdePackages.kzones
     filezilla
     gparted
+    chezmoi
   ];
 
   virtualisation.virtualbox.host.enable = true;
