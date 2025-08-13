@@ -201,6 +201,7 @@
     kdePackages.kzones
     filezilla
     gparted
+    ntfs3g
     chezmoi
   ];
 
