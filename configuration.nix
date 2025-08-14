@@ -11,6 +11,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
+  boot.kernelParams = [ "kvm.enable_virt_at_load=0" ]; # so that virtualbox works
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
