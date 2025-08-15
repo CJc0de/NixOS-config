@@ -204,6 +204,7 @@
     chezmoi
     thunderbird
     alejandra
+    libnotify
   ];
   programs.vim.enable = true;
   programs.vim.defaultEditor = true;
