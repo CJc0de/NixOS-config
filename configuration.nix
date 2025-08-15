@@ -203,6 +203,7 @@
     ntfs3g
     chezmoi
     thunderbird
+    alejandra
   ];
   programs.vim.enable = true;
   programs.vim.defaultEditor = true;
