@@ -1,23 +1,23 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, ... }:
-
 {
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  config,
+  pkgs,
+  ...
+}: {
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
-  boot.kernelParams = [ "kvm.enable_virt_at_load=0" ]; # so that virtualbox works
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
+  boot.kernelParams = ["kvm.enable_virt_at_load=0"]; # so that virtualbox works
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.luks.devices."luks-1c26923b-4360-4190-91e5-bb55681d7cfa".device = "/dev/disk/by-uuid/1c26923b-4360-4190-91e5-bb55681d7cfa";
-
 
   networking.hostName = "CJcode0x01"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -54,13 +54,12 @@
 
   # Load nvidia driver for Xorg and Wayland
   hardware.nvidia = {
-
     # Modesetting is required.
     modesetting.enable = true;
 
     # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
     # Enable this if you have graphical corruption issues or application crashes after waking
-    # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead 
+    # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead
     # of just the bare essentials.
     powerManagement.enable = true;
 
@@ -70,14 +69,14 @@
 
     # Use the NVidia open source kernel module (not to be confused with the
     # independent third-party "nouveau" open source driver).
-    # Support is limited to the Turing and later architectures. Full list of 
-    # supported GPUs is at: 
-    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
+    # Support is limited to the Turing and later architectures. Full list of
+    # supported GPUs is at:
+    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus
     # Only available from driver 515.43.04+
     open = true;
 
     # Enable the Nvidia settings menu,
-	# accessible via `nvidia-settings`.
+    # accessible via `nvidia-settings`.
     nvidiaSettings = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
@@ -88,20 +87,20 @@
   # otherwise the X-server will be running permanently on nvidia,
   # thus keeping the GPU always on (see `nvidia-smi`).
   services.xserver.videoDrivers = [
-#    "modesetting"  # example for Intel iGPU; use "amdgpu" here instead if your iGPU is AMD
+    #    "modesetting"  # example for Intel iGPU; use "amdgpu" here instead if your iGPU is AMD
     "nvidia"
   ];
 
-#  hardware.nvidia.prime = {
-#    offload = {
-#      enable = true;
-#      enableOffloadCmd = true;
-#    };
-#    # Make sure to use the correct Bus ID values for your system!
-#    intelBusId = "PCI:1:0:0";
-#    nvidiaBusId = "PCI:0:2:0";
-#    # amdgpuBusId = "PCI:54:0:0"; For AMD GPU
-#  };
+  #  hardware.nvidia.prime = {
+  #    offload = {
+  #      enable = true;
+  #      enableOffloadCmd = true;
+  #    };
+  #    # Make sure to use the correct Bus ID values for your system!
+  #    intelBusId = "PCI:1:0:0";
+  #    nvidiaBusId = "PCI:0:2:0";
+  #    # amdgpuBusId = "PCI:54:0:0"; For AMD GPU
+  #  };
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
@@ -109,9 +108,9 @@
 
   programs.nh = {
     enable = true;
-#    clean.enable = true;
-#    clean.extraArgs = "--keep-since 4d --keep 3";
-#    flake = "/home/user/my-nixos-config";
+    #    clean.enable = true;
+    #    clean.extraArgs = "--keep-since 4d --keep 3";
+    #    flake = "/home/user/my-nixos-config";
   };
 
   # Enable the KDE Plasma Desktop Environment.
@@ -148,10 +147,10 @@
 
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
-#  hardware.pulseaudio = {
-#    enable = true;
-#    package = pkgs.pulseaudioFull;
-#  };
+  #  hardware.pulseaudio = {
+  #    enable = true;
+  #    package = pkgs.pulseaudioFull;
+  #  };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -160,10 +159,10 @@
   users.users.cjcode = {
     isNormalUser = true;
     description = "Christopher Johnson";
-    extraGroups = [ "networkmanager" "wheel" "vboxusers" ];
+    extraGroups = ["networkmanager" "wheel" "vboxusers"];
     packages = with pkgs; [
       kdePackages.kate
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -178,13 +177,12 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     lshw
     git
     inetutils
     librewolf
-    vesktop 
+    vesktop
     python313
     protonvpn-gui
     proton-pass
@@ -206,6 +204,8 @@
     chezmoi
     thunderbird
   ];
+  programs.vim.enable = true;
+  programs.vim.defaultEditor = true;
 
   virtualisation.virtualbox.host.enable = true;
 
@@ -235,5 +235,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
-
 }
