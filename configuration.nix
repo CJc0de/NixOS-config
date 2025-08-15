@@ -204,6 +204,7 @@
     gparted
     ntfs3g
     chezmoi
+    thunderbird
   ];
 
   virtualisation.virtualbox.host.enable = true;
