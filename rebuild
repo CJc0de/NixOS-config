@@ -45,7 +45,7 @@ nixos-rebuild switch &>nixos-switch.log || (cat nixos-switch.log | grep --color 
 current=$(nixos-rebuild list-generations | grep True | cut -b 1-10 | xargs)
 
 # Commit all changes witih the generation metadata
-git commit -am "$current"
+git commit -am "Version $current"
 
 # Back to where you were
 popd
