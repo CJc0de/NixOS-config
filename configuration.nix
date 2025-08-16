@@ -14,7 +14,7 @@
     ./graphics-driver.nix
   ];
   boot.kernelParams = ["kvm.enable_virt_at_load=0"]; # so that virtualbox works
-
+  # testing change
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -25,7 +25,6 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
   # Enable networking
   networking.networkmanager.enable = true;
 
