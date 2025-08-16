@@ -149,6 +149,7 @@
     alejandra
     libnotify
     libgcc
+    ytdownloader
   ];
   programs.vim.enable = true;
   programs.vim.defaultEditor = true;
