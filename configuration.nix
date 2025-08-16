@@ -146,7 +146,6 @@
     filezilla
     gparted
     ntfs3g
-    chezmoi
     thunderbird
     alejandra
     libnotify
