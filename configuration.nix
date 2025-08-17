@@ -150,6 +150,7 @@
     libnotify
     libgcc
     ytdownloader
+    openconnect
   ];
   programs.vim.enable = true;
   programs.vim.defaultEditor = true;
