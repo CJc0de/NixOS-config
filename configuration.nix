@@ -150,7 +150,7 @@
     libnotify
     libgcc
     ytdownloader
-    openconnect
+    networkmanager-openconnect
   ];
 
   programs.vim.enable = true;
