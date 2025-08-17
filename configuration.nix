@@ -152,7 +152,6 @@
     ytdownloader
     openconnect
     networkmanager-openconnect
-    remmina
   ];
 
   programs.vim.enable = true;
