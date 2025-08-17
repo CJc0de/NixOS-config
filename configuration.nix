@@ -150,6 +150,7 @@
     libnotify
     libgcc
     ytdownloader
+    openconnect
     networkmanager-openconnect
   ];
 
