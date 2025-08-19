@@ -14,7 +14,7 @@
     ./graphics-driver.nix
   ];
   boot.kernelParams = ["kvm.enable_virt_at_load=0"]; # so that virtualbox works
-  # testing change
+  # testing change2
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
