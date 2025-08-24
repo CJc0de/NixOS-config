@@ -5,7 +5,9 @@
   config,
   pkgs,
   ...
-}: {
+}: let
+  unstable = import <nixos-unstable> {config = {allowUnfree = true;};};
+in {
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   imports = [
