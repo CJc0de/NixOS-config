@@ -156,10 +156,11 @@ in {
     networkmanager-openconnect
   ];
 
-  programs.vim.enable = true;
-
-  programs.neovim.enable = true;
-  programs.neovim.defaultEditor = true;
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    vimAlias = true;
+  };
 
   virtualisation.virtualbox.host.enable = true;
 
