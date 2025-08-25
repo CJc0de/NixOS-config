@@ -157,7 +157,9 @@ in {
   ];
 
   programs.vim.enable = true;
-  programs.vim.defaultEditor = true;
+
+  programs.neovim.enable = true;
+  programs.neovim.defaultEditor = true;
 
   virtualisation.virtualbox.host.enable = true;
 
