@@ -131,8 +131,8 @@ in {
     vesktop
     python313
     protonvpn-gui
-    proton-pass
-    protonmail-desktop
+    unstable.proton-pass
+    unstable.protonmail-desktop
     rpi-imager
     dolphin-emu
     libreoffice
