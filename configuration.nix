@@ -5,9 +5,13 @@
   config,
   pkgs,
   ...
-}: let
+}:
+/*
+     let
   unstable = import <nixos-unstable> {config = {allowUnfree = true;};};
-in {
+in
+*/
+{
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   imports = [
@@ -117,8 +121,6 @@ in {
 
   programs.steam.enable = true;
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -131,8 +133,10 @@ in {
     vesktop
     python313
     protonvpn-gui
-    unstable.proton-pass
+    /*
+      unstable.proton-pass
     unstable.protonmail-desktop
+    */
     rpi-imager
     dolphin-emu
     libreoffice

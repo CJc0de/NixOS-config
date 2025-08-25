@@ -34,13 +34,14 @@ git diff -U0 '*.nix'
 echo "NixOS Rebuilding..."
 
 # Rebuild, output simplified errors, log trackebacks
-sudo nixos-rebuild switch -I nixos-config=./configuration.nix &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
+sudo nixos-rebuild switch --flake ./. &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
 
 # Get current generation metadata
 current=$(nixos-rebuild list-generations | grep True | cut -b 1-10 | xargs)
+echo $current
 
 # Commit all changes witih the generation metadata
-git commit -am "Version $current"
+git commit -a
 
 # Back to where you were
 popd
