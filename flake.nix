@@ -7,10 +7,13 @@
     self,
     nixpkgs,
     ...
-  }: {
+  }@inputs: 
+  let
+    test = 0;
+  in {
     nixosConfigurations = {
-      CJcode0x01 = nixpkgs.lib.nixosSystem {
-        pkgs = import nixpkgs {
+      CJcode0x01 = inputs.nixpkgs.lib.nixosSystem {
+        pkgs = import inputs.nixpkgs {
           system = "x86_64-linux";
           config.allowUnfree = true;
         };
