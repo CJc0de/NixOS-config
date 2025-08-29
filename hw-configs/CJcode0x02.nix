@@ -12,7 +12,7 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  networking.hostName = "CJcode0x01"; # Define your hostname.
+  networking.hostName = "CJcode0x02"; # Define your hostname.
 
   # Enable OpenGL
   hardware.graphics = {
