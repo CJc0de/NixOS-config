@@ -7,8 +7,7 @@
     self,
     nixpkgs,
     ...
-  }@inputs: 
-  let
+  } @ inputs: let
     test = 0;
   in {
     nixosConfigurations = {
