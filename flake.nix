@@ -19,7 +19,7 @@
       };
   in {
     nixosConfigurations = {
-      CJcode0x01 = mkSystem [./common ./hw-configs/CJcode0x01.nix];
+      CJcode0x02 = mkSystem [./common ./hw-configs/CJcode0x02.nix];
     };
   };
 }
