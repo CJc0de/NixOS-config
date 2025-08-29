@@ -16,8 +16,6 @@ in
 
   imports = [
     # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-    ./graphics-driver.nix
   ];
   boot.kernelParams = ["kvm.enable_virt_at_load=0"]; # so that virtualbox works
   # testing change2

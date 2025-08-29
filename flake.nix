@@ -15,11 +15,11 @@
           config.allowUnfree = true;
         };
         system = "x86_64-linux";
-        modules = extraModules;
+        modules = [./common] ++ extraModules;
       };
   in {
     nixosConfigurations = {
-      CJcode0x01 = mkSystem [./configuration.nix];
+      CJcode0x01 = mkSystem [./hardware-configurations/CJcode0x01.nix];
     };
   };
 }
