@@ -129,10 +129,8 @@ in
     vesktop
     python313
     protonvpn-gui
-    /*
-      unstable.proton-pass
-    unstable.protonmail-desktop
-    */
+    proton-pass
+    protonmail-desktop
     rpi-imager
     dolphin-emu
     libreoffice
@@ -154,6 +152,7 @@ in
     ytdownloader
     openconnect
     networkmanager-openconnect
+    omnissa-horizon-client
   ];
 
   programs.neovim = {
