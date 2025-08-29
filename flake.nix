@@ -8,17 +8,18 @@
     nixpkgs,
     ...
   } @ inputs: let
-    test = 0;
-  in {
-    nixosConfigurations = {
-      CJcode0x01 = inputs.nixpkgs.lib.nixosSystem {
+    mkSystem = extraModules:
+      nixpkgs.lib.nixosSystem {
         pkgs = import inputs.nixpkgs {
           system = "x86_64-linux";
           config.allowUnfree = true;
         };
         system = "x86_64-linux";
-        modules = [./configuration.nix];
+        modules = extraModules;
       };
+  in {
+    nixosConfigurations = {
+      CJcode0x01 = mkSystem [./configuration.nix];
     };
   };
 }
