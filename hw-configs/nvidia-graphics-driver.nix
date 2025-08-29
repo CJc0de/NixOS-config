@@ -7,7 +7,6 @@
   hardware.graphics = {
     enable = true;
   };
-  /*
   # Load nvidia driver for Xorg and Wayland
   hardware.nvidia = {
     # Modesetting is required.
@@ -57,5 +56,4 @@
   #    nvidiaBusId = "PCI:0:2:0";
   #    # amdgpuBusId = "PCI:54:0:0"; For AMD GPU
   #  };
-  */
 }
