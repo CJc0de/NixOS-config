@@ -112,6 +112,16 @@ in
       #  thunderbird
     ];
   };
+  users.users.nixos-config = {
+    isSystemUser = true;
+    home = "/nixos-config";
+    createHome = true;
+    homeMode = "755";
+    description = "Account for updating NixOS config";
+    group = "nixos-config";
+    extraGroups = ["wheel"];
+  };
+  users.groups.nixos-config = {};
 
   # Install firefox.
   programs.firefox.enable = true;
