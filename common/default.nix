@@ -164,7 +164,6 @@ in
     ytdownloader
     openconnect
     networkmanager-openconnect
-    omnissa-horizon-client
     discordchatexporter-desktop
     vim
   ];
