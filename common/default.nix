@@ -166,6 +166,7 @@ in
     networkmanager-openconnect
     omnissa-horizon-client
     discordchatexporter-desktop
+    vim
   ];
 
   programs.neovim = {
