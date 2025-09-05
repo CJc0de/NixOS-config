@@ -142,12 +142,6 @@ in
     gparted
   ];
 
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    vimAlias = true;
-  };
-
   virtualisation.virtualbox.host.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
