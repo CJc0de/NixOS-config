@@ -129,9 +129,6 @@ in
   };
   users.groups.nixos-config = {};
 
-  # Install firefox.
-  programs.firefox.enable = true;
-
   programs.steam.enable = true;
 
   # List packages installed in system profile. To search, run:
