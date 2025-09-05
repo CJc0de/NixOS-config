@@ -7,6 +7,7 @@
 }: {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
+    ./wireless.nix
   ];
 
   networking.hostName = "CJcode0x02";
