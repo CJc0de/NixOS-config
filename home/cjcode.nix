@@ -6,9 +6,16 @@
   imports = [./common.nix];
 
   home.packages = [
+    # CLI utils
     pkgs.wget
     pkgs.git
     pkgs.inetutils
+    pkgs.cmake
+    pkgs.neofetch
+    pkgs.alejandra
+    pkgs.libnotify
+    pkgs.libgcc
+    # Regular desktop applications
     pkgs.librewolf
     pkgs.vesktop
     pkgs.python313
@@ -18,19 +25,14 @@
     pkgs.rpi-imager
     pkgs.dolphin-emu
     pkgs.libreoffice
-    pkgs.cmake
     pkgs.obs-studio
     pkgs.qalculate-qt
     pkgs.vscodium
     pkgs.gimp
     pkgs.brave
-    pkgs.neofetch
     kdepackages.kzones
     pkgs.filezilla
     pkgs.thunderbird
-    pkgs.alejandra
-    pkgs.libnotify
-    pkgs.libgcc
     pkgs.ytdownloader
     pkgs.discordchatexporter-desktop
     pkgs.vim
