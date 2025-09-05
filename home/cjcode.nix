@@ -25,7 +25,7 @@
     pkgs.gimp
     pkgs.brave
     pkgs.neofetch
-    pkgs.kdepackages.kzones
+    kdepackages.kzones
     pkgs.filezilla
     pkgs.thunderbird
     pkgs.alejandra
