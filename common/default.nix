@@ -102,10 +102,6 @@
       isNormalUser = true;
       description = "Christopher Johnson";
       extraGroups = ["networkmanager" "wheel" "vboxusers"];
-      packages = with pkgs; [
-        kdePackages.kate
-        #  thunderbird
-      ];
     };
     nixos-config = {
       isSystemUser = true;
