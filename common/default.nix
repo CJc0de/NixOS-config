@@ -105,23 +105,25 @@ in
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.cjcode = {
-    isNormalUser = true;
-    description = "Christopher Johnson";
-    extraGroups = ["networkmanager" "wheel" "vboxusers"];
-    packages = with pkgs; [
-      kdePackages.kate
-      #  thunderbird
-    ];
-  };
-  users.users.nixos-config = {
-    isSystemUser = true;
-    home = "/nixos-config";
-    createHome = true;
-    homeMode = "755";
-    description = "Account for updating NixOS config";
-    group = "nixos-config";
-    extraGroups = ["wheel"];
+  users.users = {
+    cjcode = {
+      isNormalUser = true;
+      description = "Christopher Johnson";
+      extraGroups = ["networkmanager" "wheel" "vboxusers"];
+      packages = with pkgs; [
+        kdePackages.kate
+        #  thunderbird
+      ];
+    };
+    nixos-config = {
+      isSystemUser = true;
+      home = "/nixos-config";
+      createHome = true;
+      homeMode = "755";
+      description = "Account for updating NixOS config";
+      group = "nixos-config";
+      extraGroups = ["wheel"];
+    };
   };
   users.groups.nixos-config = {};
 
@@ -133,39 +135,11 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    wget
     lshw
-    git
-    inetutils
-    librewolf
-    vesktop
-    python313
-    protonvpn-gui
-    proton-pass
-    protonmail-desktop
-    rpi-imager
-    dolphin-emu
-    libreoffice
-    cmake
-    obs-studio
-    qalculate-qt
-    vscodium
-    gimp
-    brave
-    neofetch
-    kdePackages.kzones
-    filezilla
-    gparted
     ntfs3g
-    thunderbird
-    alejandra
-    libnotify
-    libgcc
-    ytdownloader
     openconnect
     networkmanager-openconnect
-    discordchatexporter-desktop
-    vim
+    gparted
   ];
 
   programs.neovim = {
