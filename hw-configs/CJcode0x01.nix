@@ -13,7 +13,7 @@
     ./nvidia-graphics-driver.nix
   ];
 
-  networking.hostName = "CJcode0x01"; # Define your hostname.
+  networking.hostName = "CJcode0x01";
 
   boot.initrd.availableKernelModules = ["xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod"];
   boot.initrd.kernelModules = [];

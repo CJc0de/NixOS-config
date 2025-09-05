@@ -5,31 +5,31 @@
   config,
   pkgs,
   ...
-}:
-/*
-     let
-  unstable = import <nixos-unstable> {config = {allowUnfree = true;};};
-in
-*/
-{
+}: {
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   imports = [
     # Include the results of the hardware scan.
   ];
   boot.kernelParams = ["kvm.enable_virt_at_load=0"]; # so that virtualbox works
-  # testing change2
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  virtualisation.virtualbox.host.enable = true;
+
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
   # Enable networking
   networking.networkmanager.enable = true;
+
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d --keep 3";
+    flake = "/nixos-config/NixOS-config";
+  };
 
   # Set your time zone.
   time.timeZone = "Europe/London";
@@ -52,13 +52,6 @@ in
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
-
-  programs.nh = {
-    enable = true;
-    clean.enable = true;
-    clean.extraArgs = "--keep-since 4d --keep 3";
-    flake = "/nixos-config/NixOS-config";
-  };
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
@@ -106,7 +99,6 @@ in
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users = {
     cjcode = {
       isNormalUser = true;
@@ -131,8 +123,6 @@ in
 
   programs.steam.enable = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
     lshw
     ntfs3g
@@ -140,16 +130,6 @@ in
     networkmanager-openconnect
     gparted
   ];
-
-  virtualisation.virtualbox.host.enable = true;
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 
   # List services that you want to enable:
 
@@ -159,8 +139,6 @@ in
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
