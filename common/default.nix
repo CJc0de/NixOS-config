@@ -68,6 +68,8 @@ in
   services.xserver.xkb = {
     layout = "gb";
     variant = "";
+    model = "pc105";
+    options = "terminate:ctrl_alt_bksp,caps:escape_shifted_capslock";
   };
 
   # Configure console keymap
