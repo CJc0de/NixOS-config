@@ -40,4 +40,20 @@
   # paths it should manage.
   home.username = "cjcode";
   home.homeDirectory = "/home/cjcode";
+
+  programs.plasma = {
+    enable = true;
+    overrideConfig = true;
+    fonts = {
+      fixedWidth.styleStrategy.noSubpixelAntialias = true;
+      general.styleStrategy.noSubpixelAntialias = true;
+      menu.styleStrategy.noSubpixelAntialias = true;
+      small.styleStrategy.noSubpixelAntialias = true;
+      toolbar.styleStrategy.noSubpixelAntialias = true;
+      windowTitle.styleStrategy.noSubpixelAntialias = true;
+    };
+    workspace = {
+      lookAndFeel = "org.kde.breezedark.desktop";
+    };
+  };
 }
