@@ -10,11 +10,9 @@
     pkgs.wget
     pkgs.git
     pkgs.inetutils
-    pkgs.cmake
     pkgs.neofetch
     pkgs.alejandra
     pkgs.libnotify
-    pkgs.libgcc
     # Regular desktop applications
     pkgs.librewolf
     pkgs.vesktop
