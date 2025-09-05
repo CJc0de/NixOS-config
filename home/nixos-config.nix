@@ -5,8 +5,8 @@
 }: {
   imports = [./common.nix];
 
-  home.packages = with pkgs; [
-    alejandra
+  home.packages = [
+    pkgs.alejandra
   ];
 
   # Home Manager needs a bit of information about you and the
