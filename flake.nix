@@ -16,7 +16,8 @@
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
-        home-manager.users.cjcode = ./home;
+        home-manager.users.cjcode = ./home/cjcode.nix;
+        home-manager.users.nixos-config = ./home/nixos-config.nix;
       }
     ];
     mkSystem = extraModules:
