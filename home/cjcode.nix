@@ -47,16 +47,22 @@
     fonts = {
       fixedWidth.styleStrategy.noSubpixelAntialias = true;
       fixedWidth.pointSize = 10;
+      fixedWidth.family = "Hack";
       general.styleStrategy.noSubpixelAntialias = true;
       general.pointSize = 10;
+      general.family = "Noto Sans";
       menu.styleStrategy.noSubpixelAntialias = true;
       menu.pointSize = 10;
+      menu.family = "Noto Sans";
       small.styleStrategy.noSubpixelAntialias = true;
       small.pointSize = 8;
+      small.family = "Noto Sans";
       toolbar.styleStrategy.noSubpixelAntialias = true;
       toolbar.pointSize = 10;
+      toolbar.family = "Noto Sans";
       windowTitle.styleStrategy.noSubpixelAntialias = true;
       windowTitle.pointSize = 10;
+      windowTitle.family = "Noto Sans";
     };
     workspace = {
       lookAndFeel = "org.kde.breezedark.desktop";
