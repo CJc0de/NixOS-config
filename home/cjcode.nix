@@ -46,11 +46,17 @@
     overrideConfig = true;
     fonts = {
       fixedWidth.styleStrategy.noSubpixelAntialias = true;
+      fixedWidth.pointSize = 10;
       general.styleStrategy.noSubpixelAntialias = true;
+      general.pointSize = 10;
       menu.styleStrategy.noSubpixelAntialias = true;
+      menu.pointSize = 10;
       small.styleStrategy.noSubpixelAntialias = true;
+      small.pointSize = 8;
       toolbar.styleStrategy.noSubpixelAntialias = true;
+      toolbar.pointSize = 10;
       windowTitle.styleStrategy.noSubpixelAntialias = true;
+      windowTitle.pointSize = 10;
     };
     workspace = {
       lookAndFeel = "org.kde.breezedark.desktop";
