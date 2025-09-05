@@ -10,11 +10,11 @@
     pkgs.wget
     pkgs.git
     pkgs.inetutils
-    pkgs.neofetch
     pkgs.alejandra
     pkgs.libnotify
     pkgs.python313
     pkgs.vim
+    pkgs.fastfetch
     # Regular desktop applications
     pkgs.librewolf
     pkgs.vesktop
