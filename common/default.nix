@@ -68,6 +68,8 @@ in
   services.xserver.xkb = {
     layout = "gb";
     variant = "";
+    model = "pc105";
+    options = "terminate:ctrl_alt_bksp,caps:escape_shifted_capslock";
   };
 
   # Configure console keymap
@@ -128,9 +130,6 @@ in
   users.groups.nixos-config = {};
 
   # Install firefox.
-  programs.firefox.enable = true;
-
-  programs.steam.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
