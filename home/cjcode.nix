@@ -29,7 +29,7 @@
     pkgs.vscodium
     pkgs.gimp
     pkgs.brave
-    kdepackages.kzones
+    pkgs.kdepackages.kzones
     pkgs.filezilla
     pkgs.thunderbird
     pkgs.ytdownloader
