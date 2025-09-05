@@ -13,10 +13,11 @@
     pkgs.neofetch
     pkgs.alejandra
     pkgs.libnotify
+    pkgs.python313
+    pkgs.vim
     # Regular desktop applications
     pkgs.librewolf
     pkgs.vesktop
-    pkgs.python313
     pkgs.protonvpn-gui
     pkgs.proton-pass
     pkgs.protonmail-desktop
@@ -33,7 +34,6 @@
     pkgs.thunderbird
     pkgs.ytdownloader
     pkgs.discordchatexporter-desktop
-    pkgs.vim
     pkgs.firefox
   ];
   # Home Manager needs a bit of information about you and the
