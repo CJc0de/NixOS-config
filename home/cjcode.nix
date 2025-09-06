@@ -49,6 +49,28 @@
       options = ["terminate:ctrl_alt_bksp" "caps:escape_shifted_capslock"];
       numlockOnStartup = "on";
     };
+    input.mice = [
+      {
+        name = "PIXART USB OPTICAL MOUSE";
+        vendorId = "093a";
+        productId = "2510";
+        acceleration = 0.2;
+        accelerationProfile = "none";
+      }
+    ];
+    input.touchpads = [
+      {
+        disableWhileTyping = true;
+        enable = true;
+        middleButtonEmulation = true;
+        name = "Example to change later";
+        naturalScroll = true;
+        pointerSpeed = 0;
+        productId = "21128";
+        tapToClick = true;
+        vendorId = "2321";
+      }
+    ];
     panels = [
       {
         height = 32;
