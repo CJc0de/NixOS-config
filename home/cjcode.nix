@@ -45,11 +45,6 @@
     enable = true;
     overrideConfig = true;
     input.keyboard = {
-      layouts = [
-        {
-          layout = "gb";
-        }
-      ];
       model = "pc105";
       options = ["terminate:ctrl_alt_bksp" "caps:escape_shifted_capslock"];
       numlockOnStartup = "on";
