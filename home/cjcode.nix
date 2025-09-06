@@ -46,6 +46,8 @@
     overrideConfig = true;
     panels = [
       {
+	height = 32;
+	hiding = "dodgewindows";
         widgets = [
           "org.kde.plasma.kickoff"
           "org.kde.plasma.pager"
