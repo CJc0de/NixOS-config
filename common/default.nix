@@ -52,7 +52,13 @@
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    theme = "
+      [General]
+      background=\"/nixos-config/NixOS-config/assets/Earthrise over Compton crater - LRO full res - edit1.jpg\"
+    ";
+  };
   services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
