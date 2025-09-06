@@ -15,6 +15,8 @@
     pkgs.python313
     pkgs.vim
     pkgs.fastfetch
+    # Non-included library
+    pkgs.kdePackages.qtsvg
     # Regular desktop applications
     pkgs.librewolf
     pkgs.vesktop
