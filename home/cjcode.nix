@@ -19,7 +19,6 @@
     pkgs.kdePackages.qtsvg
     # Regular desktop applications
     pkgs.librewolf
-    pkgs.vesktop
     pkgs.protonvpn-gui
     pkgs.proton-pass
     pkgs.protonmail-desktop
@@ -42,6 +41,14 @@
   # paths it should manage.
   home.username = "cjcode";
   home.homeDirectory = "/home/cjcode";
+
+  programs.vesktop = {
+    enable = true;
+    settings = builtins.readFile ./external/vesktop-settings.json;
+    vencord = {
+      settings = builtins.readFile ./external/vencord-settings.json;
+    };
+  };
 
   programs.plasma = {
     enable = true;
