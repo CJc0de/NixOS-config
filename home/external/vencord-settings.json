@@ -83,7 +83,7 @@
             "enabled": true
         },
         "BetterGifPicker": {
-            "enabled": true
+            "enabled": false
         },
         "BetterNotesBox": {
             "enabled": true,
@@ -324,7 +324,8 @@
         "MemberCount": {
             "enabled": true,
             "memberList": true,
-            "toolTip": true
+            "toolTip": true,
+            "voiceActivity": true
         },
         "MentionAvatars": {
             "enabled": true,
@@ -972,7 +973,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1757028397285
+        "settingsSyncVersion": 1757277943017
     },
     "eagerPatches": false
 }
