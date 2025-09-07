@@ -71,13 +71,13 @@
       {
         disableWhileTyping = true;
         enable = true;
-        middleButtonEmulation = true;
-        name = "Example to change later";
+        name = "AlpsPS/2 ALPS GlidePoint";
         naturalScroll = true;
         pointerSpeed = 0;
-        productId = "21128";
+        accelerationProfile = "default";
+        productId = "0008";
         tapToClick = true;
-        vendorId = "2321";
+        vendorId = "0002";
       }
     ];
     panels = [
