@@ -94,7 +94,7 @@
     panels = [
       {
         height = 32;
-        hiding = "dodgewindows";
+        hiding = "none";
         widgets = [
           "org.kde.plasma.kickoff"
           "org.kde.plasma.pager"
