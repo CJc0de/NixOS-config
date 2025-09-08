@@ -35,6 +35,7 @@
     pkgs.ytdownloader
     pkgs.discordchatexporter-desktop
     pkgs.firefox
+    pkgs.mullvad-browser
   ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
