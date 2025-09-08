@@ -71,13 +71,13 @@
       {
         disableWhileTyping = true;
         enable = true;
-        name = "AlpsPS/2 ALPS GlidePoint";
+        name = "DELL0810:00 044E:120A Touchpad";
         naturalScroll = true;
         pointerSpeed = 0;
         accelerationProfile = "default";
-        productId = "0008";
+        productId = "120a";
         tapToClick = true;
-        vendorId = "0002";
+        vendorId = "044e";
       }
     ];
     panels = [
