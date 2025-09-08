@@ -18,7 +18,6 @@
     # Non-included library
     pkgs.kdePackages.qtsvg
     # Regular desktop applications
-    pkgs.librewolf
     pkgs.protonvpn-gui
     pkgs.proton-pass
     pkgs.protonmail-desktop
@@ -48,6 +47,10 @@
     vencord = {
       settings = builtins.readFile ./external/vencord-settings.json;
     };
+  };
+
+  programs.librewolf = {
+    enable = true;
   };
 
   programs.plasma = {
