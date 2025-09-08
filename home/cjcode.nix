@@ -51,6 +51,15 @@
 
   programs.librewolf = {
     enable = true;
+    profiles."testingProfile" = {
+      isDefault = true;
+      name = "testingProfile";
+      # path = "/home/cjcode/.librewolf/6lnpchhf.testingProfile";
+      userChrome = builtins.readFile ./external/librewolf-userChrome.css;
+    };
+    settings = {
+      "browser.compactmode.show" = true;
+    };
   };
 
   programs.plasma = {
