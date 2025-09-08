@@ -69,6 +69,13 @@
         acceleration = 0.2;
         accelerationProfile = "none";
       }
+      {
+        name = "Corsair Corsair Gaming HARPOON RGB Mouse";
+        vendorId = "1b1c";
+        productId = "1b3c";
+        acceleration = 0.2;
+        accelerationProfile = "none";
+      }
     ];
     input.touchpads = [
       {
