@@ -7,6 +7,9 @@
     enable = true;
     userEmail = "git@cjcode.uk";
     userName = "Christopher Johnson";
+    aliases = {
+      lg = "log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
+    };
   };
 
   programs.neovim = {
