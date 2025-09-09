@@ -52,14 +52,51 @@
 
   programs.librewolf = {
     enable = true;
-    profiles."testingProfile" = {
+    profiles.main = {
       isDefault = true;
-      name = "testingProfile";
-      # path = "/home/cjcode/.librewolf/6lnpchhf.testingProfile";
+      name = "Main Profile";
       userChrome = builtins.readFile ./external/librewolf-userChrome.css;
+      containersForce = true;
+      containers = {
+        personal = {
+          id = 1;
+          name = "Personal";
+          color = "turquoise";
+          icon = "fingerprint";
+        };
+        soton-uni = {
+          id = 2;
+          name = "Southampton University";
+          color = "purple";
+          icon = "briefcase";
+        };
+        youtube-music = {
+          id = 3;
+          name = "Youtube Music";
+          color = "orange";
+          icon = "fence";
+        };
+        youtube = {
+          id = 4;
+          name = "Youtube";
+          color = "yellow";
+          icon = "fence";
+        };
+      };
     };
     settings = {
       "browser.compactmode.show" = true;
+    };
+    policies = {
+      DisableTelemetry = true;
+      DisableFirefoxStudies = true;
+      EnableTrackingProtection = {
+        Value = true;
+        Locked = true;
+        Cryptomining = true;
+        Fingerprinting = true;
+      };
+      DisablePocket = true;
     };
   };
 
