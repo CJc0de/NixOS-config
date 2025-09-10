@@ -87,17 +87,7 @@
     settings = {
       "browser.compactmode.show" = true;
     };
-    policies = {
-      DisableTelemetry = true;
-      DisableFirefoxStudies = true;
-      EnableTrackingProtection = {
-        Value = true;
-        Locked = true;
-        Cryptomining = true;
-        Fingerprinting = true;
-      };
-      DisablePocket = true;
-    };
+    policies = import ./librewolf-policies.nix;
   };
 
   programs.plasma = {
