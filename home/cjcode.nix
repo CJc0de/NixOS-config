@@ -44,9 +44,9 @@
 
   programs.vesktop = {
     enable = true;
-    settings = builtins.readFile ./external/vesktop-settings.json;
+    # settings = builtins.readFile ./external/vesktop-settings.json;
     vencord = {
-      settings = builtins.readFile ./external/vencord-settings.json;
+      # settings = builtins.readFile ./external/vencord-settings.json;
     };
   };
 
