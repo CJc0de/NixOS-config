@@ -128,6 +128,7 @@
     ntfs3g
     openconnect
     networkmanager-openconnect
+    gnupg
     android-udev-rules
     gparted
   ];
