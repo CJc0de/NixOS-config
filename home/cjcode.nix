@@ -16,6 +16,7 @@
     pkgs.vim
     pkgs.fastfetch
     pkgs.android-tools
+    pkgs.fdupes
     # Non-included library
     pkgs.kdePackages.qtsvg
     # Regular desktop applications
