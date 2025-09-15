@@ -15,6 +15,7 @@
     pkgs.python313
     pkgs.vim
     pkgs.fastfetch
+    pkgs.android-tools
     # Non-included library
     pkgs.kdePackages.qtsvg
     # Regular desktop applications

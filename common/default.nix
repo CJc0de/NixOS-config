@@ -107,7 +107,7 @@
     cjcode = {
       isNormalUser = true;
       description = "Christopher Johnson";
-      extraGroups = ["networkmanager" "wheel" "vboxusers"];
+      extraGroups = ["networkmanager" "wheel" "vboxusers" "adbusers"];
     };
     nixos-config = {
       isSystemUser = true;
@@ -128,6 +128,7 @@
     ntfs3g
     openconnect
     networkmanager-openconnect
+    android-udev-rules
     gparted
   ];
 
