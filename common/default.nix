@@ -131,6 +131,7 @@
     openconnect
     networkmanager-openconnect
     gnupg
+    timeshift-minimal
     android-udev-rules
     gparted
   ];
