@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+
+nix flake update
+
+nh os switch .
+
+git commit -am "Updated System"

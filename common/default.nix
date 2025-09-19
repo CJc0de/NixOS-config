@@ -100,6 +100,8 @@
   #    package = pkgs.pulseaudioFull;
   #  };
 
+  hardware.sane.enable = true;
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -107,7 +109,7 @@
     cjcode = {
       isNormalUser = true;
       description = "Christopher Johnson";
-      extraGroups = ["networkmanager" "wheel" "vboxusers"];
+      extraGroups = ["networkmanager" "wheel" "vboxusers" "adbusers" "scanner" "lp"];
     };
     nixos-config = {
       isSystemUser = true;
@@ -128,11 +130,15 @@
     ntfs3g
     openconnect
     networkmanager-openconnect
+    gnupg
+    android-udev-rules
     gparted
     kdePackages.partitionmanager
   ];
 
   # List services that you want to enable:
+
+  services.fwupd.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;

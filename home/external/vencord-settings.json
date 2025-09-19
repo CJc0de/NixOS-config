@@ -284,10 +284,10 @@
         "ImageZoom": {
             "enabled": true,
             "size": 10000,
-            "zoom": 4.371016626570243,
+            "zoom": 4.985559566787003,
             "nearestNeighbour": true,
             "square": true,
-            "saveZoomValues": true,
+            "saveZoomValues": false,
             "invertScroll": true,
             "zoomSpeed": 0.1
         },
@@ -653,7 +653,7 @@
             "onlySnow": false
         },
         "Summaries": {
-            "enabled": true,
+            "enabled": false,
             "summaryExpiryThresholdDays": 1
         },
         "SendTimestamps": {
@@ -973,7 +973,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1757277943017
+        "settingsSyncVersion": 1757857092482
     },
     "eagerPatches": false
 }

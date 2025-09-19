@@ -15,6 +15,8 @@
     pkgs.python313
     pkgs.vim
     pkgs.fastfetch
+    pkgs.android-tools
+    pkgs.fdupes
     # Non-included library
     pkgs.kdePackages.qtsvg
     # Regular desktop applications
@@ -36,6 +38,7 @@
     pkgs.discordchatexporter-desktop
     pkgs.firefox
     pkgs.mullvad-browser
+    pkgs.upscayl
   ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -44,9 +47,9 @@
 
   programs.vesktop = {
     enable = true;
-    settings = builtins.readFile ./external/vesktop-settings.json;
+    # settings = builtins.readFile ./external/vesktop-settings.json;
     vencord = {
-      settings = builtins.readFile ./external/vencord-settings.json;
+      # settings = builtins.readFile ./external/vencord-settings.json;
     };
   };
 
