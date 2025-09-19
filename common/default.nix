@@ -129,6 +129,7 @@
     openconnect
     networkmanager-openconnect
     gparted
+    kdePackages.partitionmanager
   ];
 
   # List services that you want to enable:
