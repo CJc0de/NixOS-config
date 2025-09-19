@@ -35,6 +35,7 @@
     pkgs.ytdownloader
     pkgs.discordchatexporter-desktop
     pkgs.firefox
+    pkgs.mullvad-browser
   ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -51,11 +52,37 @@
 
   programs.librewolf = {
     enable = true;
-    profiles."testingProfile" = {
+    profiles.main = {
       isDefault = true;
-      name = "testingProfile";
-      # path = "/home/cjcode/.librewolf/6lnpchhf.testingProfile";
+      name = "Main Profile";
       userChrome = builtins.readFile ./external/librewolf-userChrome.css;
+      containersForce = true;
+      containers = {
+        personal = {
+          id = 1;
+          name = "Personal";
+          color = "turquoise";
+          icon = "fingerprint";
+        };
+        soton-uni = {
+          id = 2;
+          name = "Southampton University";
+          color = "purple";
+          icon = "briefcase";
+        };
+        youtube-music = {
+          id = 3;
+          name = "Youtube Music";
+          color = "orange";
+          icon = "fence";
+        };
+        youtube = {
+          id = 4;
+          name = "Youtube";
+          color = "yellow";
+          icon = "fence";
+        };
+      };
     };
     settings = {
       "browser.compactmode.show" = true;
@@ -78,24 +105,31 @@
         acceleration = 0.2;
         accelerationProfile = "none";
       }
+      {
+        name = "Corsair Corsair Gaming HARPOON RGB Mouse";
+        vendorId = "1b1c";
+        productId = "1b3c";
+        acceleration = 0.2;
+        accelerationProfile = "none";
+      }
     ];
     input.touchpads = [
       {
         disableWhileTyping = true;
         enable = true;
-        name = "AlpsPS/2 ALPS GlidePoint";
+        name = "DELL0810:00 044E:120A Touchpad";
         naturalScroll = true;
         pointerSpeed = 0;
         accelerationProfile = "default";
-        productId = "0008";
+        productId = "120a";
         tapToClick = true;
-        vendorId = "0002";
+        vendorId = "044e";
       }
     ];
     panels = [
       {
         height = 32;
-        hiding = "dodgewindows";
+        hiding = "none";
         widgets = [
           "org.kde.plasma.kickoff"
           "org.kde.plasma.pager"
